@@ -1,3 +1,3 @@
-import sayHello from './lib/sayHello';
+import MainPage from './MainPage';
 
-sayHello();
+MainPage();

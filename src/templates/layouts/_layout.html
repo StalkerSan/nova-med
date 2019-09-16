@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8"/>
-    <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
+    <title>NOVA - НЕ ТЕРПИТЕ БОЛЬ ПРОЙДИТЕ ДИАГНОСТИКУ В НАШЕМ ЦЕНТРЕ</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="theme-color" content="#fff"/>
@@ -13,15 +13,19 @@
   </head>
   <body>
 
-    <!-- BEGIN content -->
-    <div class="out">
-      {% block content %}{% endblock %}
-    </div>
-    <!-- END content -->
+    <!--  BEGIN HEADER -->
+    {% include "../partials/_header.html" %}
+    <!-- END HEADER -->
 
-    <!-- BEGIN scripts -->
+    <!-- BEGIN CONTENT -->
+    <main class="main">
+      {% block content %}{% endblock %}
+    </main>
+    <!-- END CONTENT -->
+
+    <!-- BEGIN SCRIPTS -->
     <script type="text/javascript" src="js/app.js"></script>
-    <!-- END scripts -->
+    <!-- END SCRIPTS -->
 
   </body>
 </html>
