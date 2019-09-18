@@ -13,6 +13,7 @@ trustItems: [
 ]
 ---
 {% extends "layouts/_layout.html" %}
+{% from 'partials/_mixins.html' import icon %}
 
 {% block content %}
 	
@@ -61,6 +62,83 @@ trustItems: [
             <a href="#">Посмотреть видео о центре</a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <div class="services__inner">
+        <h2 class="section__title">Наши услуги</h2>
+        <div class="services__items">
+          {% for i in range(0,8) %}
+          <div class="services__item" style="background-image: url('img/main-page/services-1.png')">
+            <div class="services__item--icon">
+              {{ icon('services-icon-1') }}
+            </div>
+            <h4>5 видов массажа</h4>
+            <a href="#" class="btn__white">Подробнее</a>
+          </div>
+          {% endfor %}
+        </div>
+        <a href="#" class="btn__primary">Посмотреть все услуги</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="feeds">
+    <div class="container">
+      <div class="feeds__inner">
+        <div class="feeds__head">
+          <h2 class="section__title">Отзывы наших клиентов</h2>
+          <div class="feeds__slider--nav">
+            <div class="feeds__slider--prev">
+              {{ icon('arrow-left') }}
+            </div>
+            <div class="feeds__slider--next">
+              {{ icon('arrow-right') }}
+            </div>
+          </div>
+        </div>
+        <div class="feeds__slider">
+          <div class="swiper-container feeds__slider--init">
+            <div class="swiper-wrapper">
+              {% for i in range(0,6) %}
+              <div class="swiper-slide">
+                <div class="feeds__item">
+                  <img src="img/main-page/testimonials-1.png" alt="">
+                  <div class="feeds__item--content">
+                    <h4>Карлыгаш</h4>
+                    <span>20 лет</span>
+                    <p>Часто бывает так, что смысл текста не имеет большого значения, а важен только его объем или структура. Генератор текста онлайн позволит задать необходимое количество слов, из которых будут сформировано указанное Вами число абзацев. </p>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wip">
+    <div class="container">
+      <div class="wip__inner">
+      
+        <h2 class="section__title">Посмотрите как работают наши спецалисты</h2>
+
+        <div class="wip__items">
+          {% for i in range(0,4) %}
+          <div class="wip__item" style="background-image: url('img/main-page/watch-1.png')">
+            <a href="#">
+              {{ icon('play') }}
+              <label>Как работает наркоз ?</label>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      
       </div>
     </div>
   </section>
