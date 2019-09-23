@@ -1,0 +1,26 @@
+{% extends "layouts/_layout.html" %}
+{% from 'partials/_mixins.html' import icon %}
+
+{% block content %}
+
+  <section class="services">
+    <div class="container">
+      <div class="services__inner">
+        <h2 class="section__title--inner">Наши услуги</h2>
+        <div class="services__items">
+          {% for i in range(0,8) %}
+          <div class="services__item" style="background-image: url('img/main-page/services-1.png')">
+            <div class="services__item--icon">
+              {{ icon('services-icon-1') }}
+            </div>
+            <h4>5 видов массажа</h4>
+            <a href="#" class="btn__white">Подробнее</a>
+          </div>
+          {% endfor %}
+        </div>
+        <a href="#" class="btn__primary">Посмотреть все услуги</a>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

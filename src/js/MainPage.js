@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Swiper from 'swiper';
 
 export default function MainPage() {
@@ -10,6 +11,7 @@ export default function MainPage() {
 
     const FeedsSlider = new Swiper('.feeds__slider--init', {
       slidesPerView: 3,
+      spaceBetween: 30,
       navigation: {
         prevEl: '.feeds__slider--prev',
         nextEl: '.feeds__slider--next'
