@@ -403,6 +403,12 @@
     justify-content: space-between
 
   &__slider
+    overflow: hidden
+    margin-top: 50px
+    height: 550px
+    padding-right: 20px
+    &--init 
+      overflow: visible
     &--nav
       position: relative
       display: flex
@@ -455,7 +461,7 @@
       position: absolute
       bottom: 0
       right: 0
-
+      transform: translate(5%, 50%)
 
 .faq
   position: relative

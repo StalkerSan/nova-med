@@ -20,6 +20,7 @@ export default function MainPage() {
 
     const ExpertsSlider = new Swiper('.experts__slider--init', {
       slidesPerView: 3,
+      spaceBetween: 30,
       navigation: {
         prevEl: '.experts__slider--prev',
         nextEl: '.experts__slider--next'

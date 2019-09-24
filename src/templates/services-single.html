@@ -1,0 +1,105 @@
+{% extends "layouts/_layout.html" %}
+{% from 'partials/_mixins.html' import icon %}
+
+{% block content %}
+
+  <section class="services-single-h">
+    <div class="container">
+      <div class="breads">
+        <a href="#" class="breads__link">Главная</a>
+        /
+        <a href="#" class="breads__link">Услуги</a>
+        /
+        <a href="#" class="breads__link">Массаж</a>
+      </div>
+      <div class="services-single-h__inner">
+        <div class="services-inner__content--inner">
+          <div class="services-inner__left">
+            <h2 class="section__sub">Массаж</h2>
+            <p>Врач-рентгенолог, высшей категории. Проведение МРТ-исследований: головного мозга, костно-суставной системы, органов грудной клетки, органов брюшной полости и забрюшинного пространства, органов малого таза .
+                Перед исследованиями следует продолжить прием лекарств (если они Вам назначены), рекомендуется умеренный прием пищи.
+                <br> <br>
+                - Необходимо сообщить о наличии металлических суставных протезов, искусственных сердечных клапанов, электронных медицинских устройств, электронных имплантатов среднего уха или имплантатов в зубном ряду.</p>
+          </div>
+          <div class="services-inner__right">
+            <img src="img/services/massage.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="services-single-types">
+    <div class="container">
+
+      <div class="services-single-types__inner">
+        <h2 class="section__sub">Виды массажа</h2>
+
+        <div class="services-single-types__items">
+          {% for i in range(0,4) %}
+          <div class="services-single-types__item">
+            <h4 data-count="{{i+1}}">Тайский массаж</h4>
+            <ul>
+              <li>Искусство классического тайского массажа формировалось под влиянием древней культуры Китая и </li>
+              <li>Индии и приобрело нынешний вид благодаря долгой практике, наблюдению за</li>
+              <li>Природой человеческого тела, методом проб и ошибок создавая чёткую систему оздоровительной терапии.</li>
+            </ul>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="services-single-experts">
+    <div class="container">
+
+      <div class="services-single-experts__inner">
+        <h2 class="section__sub">Специалисты которые выполняють эту услугу</h2>
+
+        <div class="services-single-experts__items">
+          {% for i in range(0,3) %}
+
+            <figure class="experts__item">
+              <img src="img/main-page/workers-1.png" alt="">
+              <figcaption class="experts__item--desc">
+                <h4>Serenity Steward</h4>
+                <span>Врач хирург</span>
+              </figcaption>
+              <a href="#" class="btn__white">Подробнее</a>
+            </figure>
+
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- place for form -->
+
+  <section class="services-single-experts">
+    <div class="container">
+
+      <div class="services-single-experts__inner">
+        <h2 class="section__sub">Видео как выполняется массаж</h2>
+
+        <div class="services-single-experts__items">
+          {% for i in range(0,2) %}
+
+          <div class="wip__item" style="background-image: url('img/main-page/watch-1.png')">
+            <a href="#">
+              {{ icon('play') }}
+              <label>Как работает наркоз ?</label>
+            </a>
+          </div>
+
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+{% endblock %}
