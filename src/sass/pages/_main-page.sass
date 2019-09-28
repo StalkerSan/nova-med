@@ -83,6 +83,7 @@
   height: 680px
   padding: 100px 0
   overflow: hidden
+  z-index: 2
   
   &__inner
     position: relative
@@ -109,10 +110,13 @@
     display: flex
     justify-content: space-between
   &__item
+    position: relative
     width: 49%
     padding: 36px 26px
     border-radius: 5px
+    background-color: #fff
     box-shadow: 0px 4px 50px rgba(147, 157, 157, 0.25)
+    z-index: 2
     h4 
       position: relative
       font-size: 40px
