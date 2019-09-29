@@ -9,23 +9,46 @@ export default function MainPage() {
       slidesPerView: 1
     });
 
-    const FeedsSlider = new Swiper('.feeds__slider--init', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      navigation: {
-        prevEl: '.feeds__slider--prev',
-        nextEl: '.feeds__slider--next'
-      }
-    });
+    if(window.innerWidth > 900){
+      console.log("🐞: MainPage -> window.innerWidth", window.innerWidth)
+      const FeedsSlider = new Swiper('.feeds__slider--init', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          prevEl: '.feeds__slider--prev',
+          nextEl: '.feeds__slider--next'
+        },
+      });
+    } else {
+      const FeedsSliderM = new Swiper('.feeds__slider--init', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+          prevEl: '.feeds__slider--prev',
+          nextEl: '.feeds__slider--next'
+        },
+      });
+    }
 
-    const ExpertsSlider = new Swiper('.experts__slider--init', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      navigation: {
-        prevEl: '.experts__slider--prev',
-        nextEl: '.experts__slider--next'
-      }
-    });
+    if(window.innerWidth > 900){
+      const ExpertsSlider = new Swiper('.experts__slider--init', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          prevEl: '.experts__slider--prev',
+          nextEl: '.experts__slider--next'
+        }
+      });
+    } else {
+      const ExpertsSliderM = new Swiper('.experts__slider--init', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+          prevEl: '.experts__slider--prev',
+          nextEl: '.experts__slider--next'
+        }
+      });
+    }
 
     const FAQDropdown = () => {
       const Trigger = document.querySelectorAll('.faq__item--top');
