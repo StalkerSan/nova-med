@@ -10,6 +10,27 @@
       &-wrapper,
       &-slide 
         height: 100%
+    .swiper-pagination
+      bottom: 150px
+      width: 50%
+    .swiper-pagination-bullet
+      position: relative
+      background-color: transparent 
+      border: 1px solid #fff
+      margin: 0 10px !important
+      &-active
+        &::before
+          content: ''
+          position: absolute
+          top: -5px
+          left: -5px
+          width: calc(100% + 10px)
+          height: calc(100% + 10px)
+          border: 1px solid #ffffff
+          border-radius: 50%
+          border-bottom-color: transparent 
+          border-right-color: transparent 
+          transform: rotate(45deg)
   &__item
     position: relative
     width: 100%
@@ -67,6 +88,7 @@
       margin-right: 20px
       @media (max-width: $small)
         margin: 10px 0
+        text-align: center
 
 .section__title
   position: relative

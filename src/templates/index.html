@@ -14,6 +14,7 @@ trustItems: [
 ---
 {% extends "layouts/_layout.html" %}
 {% from 'partials/_mixins.html' import icon %}
+{% from 'partials/_mixins.html' import wipVideo %}
 
 {% block content %}
 	
@@ -38,7 +39,26 @@ trustItems: [
             </div>
           </div>
         </div>
+        <div class="swiper-slide">
+          <div class="hero__item" style="background-image: url('img/main-page/hero-1.png')">
+            <div class="container">
+              <div class="hero__item--content">
+                <h1 class="hero__title">НЕ ТЕРПИТЕ БОЛЬ ПРОЙДИТЕ ДИАГНОСТИКУ В НАШЕМ ЦЕНТРЕ</h1>
+                <ul>
+                  <li>КАЧЕСТВЕННЫЙ И ПРОФЕССИОНАЛЬНЫЙ СЕРВИС</li>
+                  <li>МЫ В 10 ГОРОДАХ КАЗАХСТАНА</li>
+                  <li>1 МИЛЛИОНА ДОВОЛЬНЫХ КЛИЕНТОВ</li>
+                </ul>
+                <div class="hero__btns">
+                  <a href="#" class="btn__primary">Оставить заявку</a>
+                  <a href="#" class="btn__transparent">Выбрать услугу</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <div class="swiper-pagination"></div>
     </div>
   </section>
 
@@ -59,7 +79,7 @@ trustItems: [
         </div>
         <div class="trust__right">
           <div class="trust__video" style="background-image: url('img/main-page/trust-videoo-holder.png')">
-            <a href="#">Посмотреть видео о центре</a>
+            <a class="wip__trigger" href="#" data-video-url="https://www.youtube.com/embed/MxHQCvnOqEk">Посмотреть видео о центре</a>
           </div>
         </div>
       </div>
@@ -131,7 +151,7 @@ trustItems: [
         <div class="wip__items">
           {% for i in range(0,4) %}
           <div class="wip__item" style="background-image: url('img/main-page/watch-1.png')">
-            <a href="#">
+            <a class="wip__trigger" href="#" data-video-url="https://www.youtube.com/embed/MxHQCvnOqEk">
               {{ icon('play') }}
               <label>Как работает наркоз ?</label>
             </a>
@@ -282,5 +302,7 @@ trustItems: [
   <div class="extra">
     
   </div>
+
+  {{ wipVideo() }}
 
 {% endblock %}

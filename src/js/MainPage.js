@@ -6,7 +6,10 @@ export default function MainPage() {
   if(HeroSection){
     
     const HeroSlider = new Swiper('.hero__slider', {
-      slidesPerView: 1
+      slidesPerView: 1,
+      pagination: {
+        el: '.swiper-pagination',
+      },
     });
 
     if(window.innerWidth > 900){

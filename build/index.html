@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
-    <link rel="stylesheet" href="data/swiper.min.css">
+    <link rel="stylesheet" href="data/swiper.min.css" />
+    <link rel="stylesheet" href="data/jquery.fancybox.css" />
     <link rel="stylesheet" media="all" href="css/app.css" />
   </head>
   <body>
@@ -82,7 +83,26 @@
                 </div>
               </div>
             </div>
+            <div class="swiper-slide">
+              <div class="hero__item" style="background-image: url('img/main-page/hero-1.png')">
+                <div class="container">
+                  <div class="hero__item--content">
+                    <h1 class="hero__title">НЕ ТЕРПИТЕ БОЛЬ ПРОЙДИТЕ ДИАГНОСТИКУ В НАШЕМ ЦЕНТРЕ</h1>
+                    <ul>
+                      <li>КАЧЕСТВЕННЫЙ И ПРОФЕССИОНАЛЬНЫЙ СЕРВИС</li>
+                      <li>МЫ В 10 ГОРОДАХ КАЗАХСТАНА</li>
+                      <li>1 МИЛЛИОНА ДОВОЛЬНЫХ КЛИЕНТОВ</li>
+                    </ul>
+                    <div class="hero__btns">
+                      <a href="#" class="btn__primary">Оставить заявку</a>
+                      <a href="#" class="btn__transparent">Выбрать услугу</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
       <section class="trust">
@@ -104,7 +124,7 @@
             </div>
             <div class="trust__right">
               <div class="trust__video" style="background-image: url('img/main-page/trust-videoo-holder.png')">
-                <a href="#">Посмотреть видео о центре</a>
+                <a class="wip__trigger" href="#" data-video-url="https://www.youtube.com/embed/MxHQCvnOqEk">Посмотреть видео о центре</a>
               </div>
             </div>
           </div>
@@ -285,7 +305,7 @@
             <h2 class="section__title">Посмотрите как работают наши спецалисты</h2>
             <div class="wip__items">
               <div class="wip__item" style="background-image: url('img/main-page/watch-1.png')">
-                <a href="#">
+                <a class="wip__trigger" href="#" data-video-url="https://www.youtube.com/embed/MxHQCvnOqEk">
                   <svg class="icon icon-play">
                     <use xlink:href="img/sprite.svg#icon-play"></use>
                   </svg>
@@ -293,7 +313,7 @@
                 </a>
               </div>
               <div class="wip__item" style="background-image: url('img/main-page/watch-1.png')">
-                <a href="#">
+                <a class="wip__trigger" href="#" data-video-url="https://www.youtube.com/embed/MxHQCvnOqEk">
                   <svg class="icon icon-play">
                     <use xlink:href="img/sprite.svg#icon-play"></use>
                   </svg>
@@ -301,7 +321,7 @@
                 </a>
               </div>
               <div class="wip__item" style="background-image: url('img/main-page/watch-1.png')">
-                <a href="#">
+                <a class="wip__trigger" href="#" data-video-url="https://www.youtube.com/embed/MxHQCvnOqEk">
                   <svg class="icon icon-play">
                     <use xlink:href="img/sprite.svg#icon-play"></use>
                   </svg>
@@ -309,7 +329,7 @@
                 </a>
               </div>
               <div class="wip__item" style="background-image: url('img/main-page/watch-1.png')">
-                <a href="#">
+                <a class="wip__trigger" href="#" data-video-url="https://www.youtube.com/embed/MxHQCvnOqEk">
                   <svg class="icon icon-play">
                     <use xlink:href="img/sprite.svg#icon-play"></use>
                   </svg>
@@ -509,6 +529,9 @@
         </div>
       </section>
       <div class="extra">
+      </div>
+      <div id="wip__modal--video" class="wip__modal--video">
+        <iframe src="" frameborder="0"></iframe>
       </div>
     </main>
     <!-- END CONTENT -->
