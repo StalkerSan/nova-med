@@ -242,6 +242,7 @@ body
 	z-index: -1
 
 .wip__modal--video
+	display: none
 	position: relative
 	width: 60%
 	height: 80%
@@ -252,3 +253,76 @@ body
 	iframe
 		width: 100%
 		height: 100%
+
+.feed__modal
+	position: relative
+	padding: 44px 12px !important
+	background-color: transparent !important
+	.services-form__form
+		position: relative
+		bottom: auto
+		right: auto
+		left: auto
+		top: auto
+		margin: 0
+	.fancybox-button svg path
+		fill: #ffffff
+
+.contacts
+	&__wrap
+		position: relative
+		width: 100%
+		display: flex
+		justify-content: space-between
+		padding-bottom: 60px
+		@media (max-width: $small)
+			flex-direction: column
+	&__left
+		position: relative
+		width: 45%
+		@media (max-width: $small)
+			width: 100%
+			margin-bottom: 30px
+		h3 
+			margin: 25px 0 15px 0
+		p, a 
+			display: block
+			font-size: 18px
+			color: $color-text-dark
+			margin: 0 !important
+			margin-bottom: 10px !important
+			transition: .3s ease-in
+		a 
+			position: relative
+			padding-left: 30px
+			&::before
+        content: ''
+        width: 20px
+        height: 2px
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        background-color: #60DA6C
+		a:hover
+			color: $color-accent
+	&__socials
+		position: relative
+		display: flex
+		a 
+			margin: 0 !important
+			margin-right: 15px !important
+			padding: 0 !important
+			font-size: 22px 
+			transition: .3s ease-in
+			&::before
+				display: none
+			&:hover
+				color: $color-accent
+	&__right
+		position: relative
+		width: 55%
+		@media (max-width: $small)
+			width: 100%
+		iframe
+			width: 100%

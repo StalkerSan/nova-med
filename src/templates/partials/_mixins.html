@@ -7,3 +7,16 @@
   <iframe src="" frameborder="0"></iframe>
 </div>
 {% endmacro %}
+
+{% macro feedModal() %}
+<div id="feed__modal" class="feed__modal" style="display: none;">
+          <div class="services-form__form">
+            <form>
+              <h3>Оставьте заявку</h3>
+              <input type="text" placeholder="Введите свое  имя">
+              <input type="tel" placeholder="Введите свои номер телефона">
+              <input class="btn__primary" type="submit" value="Оставить заявку">
+            </form>
+          </div>
+</div>
+{% endmacro %}

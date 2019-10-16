@@ -9,6 +9,7 @@
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" href="data/swiper.min.css" />
     <link rel="stylesheet" href="data/jquery.fancybox.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" media="all" href="css/app.css" />
   </head>
   <body>
@@ -54,7 +55,7 @@
                 <a href="#">КОНТАКТЫ</a>
               </li>
             </ul>
-            <a href="#" class="btn btn__cta">ОСТАВИТЬ ЗАЯВКУ</a>
+            <a data-fancybox data-src="#feed__modal" href="#" class="btn btn__cta">ОСТАВИТЬ ЗАЯВКУ</a>
           </nav>
         </div>
       </div>
@@ -215,6 +216,16 @@
     <!-- END FOOTER -->
     <div id="wip__modal--video" class="wip__modal--video">
       <iframe src="" frameborder="0"></iframe>
+    </div>
+    <div id="feed__modal" class="feed__modal" style="display: none;">
+      <div class="services-form__form">
+        <form>
+          <h3>Оставьте заявку</h3>
+          <input type="text" placeholder="Введите свое  имя">
+          <input type="tel" placeholder="Введите свои номер телефона">
+          <input class="btn__primary" type="submit" value="Оставить заявку">
+        </form>
+      </div>
     </div>
     <!-- BEGIN SCRIPTS -->
     <script type="text/javascript" src="js/app.js"></script>
