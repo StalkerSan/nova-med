@@ -7,6 +7,9 @@ body
 	width: 100%
 	height: 100%
 	margin: 0 auto
+	@media (max-width: $middle)
+		max-width: $middle
+		padding: 0 15px
 	@media (max-width: $small)
 		max-width: 560px
 		padding: 0 15px
@@ -31,10 +34,21 @@ body
 		justify-content: space-between
 		align-items: center
 		z-index: 22
+	&__logo
+		// position: relative
+		// @media(max-width: $middle)
+		// 	width: 25%
+		// 	img 
+		// 		width: 100%
+		@media (max-width: $xs)
+			position: relative
+			width: 35%
+			img 
+				width: 100%
 	&__working-time
 		position: relative
 		padding-left: 35px
-		@media (max-width: $small)
+		@media (max-width: $middle)
 			display: none
 		&::before
 			content: ''
@@ -52,7 +66,7 @@ body
 	&__socials
 		display: flex
 		align-items: center
-		@media (max-width: $small)
+		@media (max-width: $middle)
 			display: none
 		a 
 			margin-left: 20px
@@ -83,7 +97,66 @@ body
 			background-repeat: no-repeat
 			background-position: center
 			z-index: 1
-
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			right: 30px
+			transform: rotate(45deg) translate(-50%, -50%)
+			border: 4px solid #00A1C9
+			border-top-color: transparent 
+			border-left-color: transparent
+			width: 5px
+			height: 5px
+		&--popup
+			position: absolute
+			top: 60px
+			left: 0
+			width: 245px
+			box-sizing: border-box
+			background-color: #57A25E
+			padding: 30px 25px 20px 25px
+			border-radius: 6px
+			display: none
+			flex-direction: column
+			transition: .3s ease-in
+			&.is-active
+				display: flex
+			&:before
+				content: ''
+				position: absolute
+				top: -8px
+				left: 15px
+				width: 20px
+				height: 20px
+				background-color: #57A25E
+				border-radius: 2px
+				transform-origin: 50% 50%
+				transform: rotate(45deg)
+			label 
+				font-size: 20px
+				font-weight: 700
+				color: #ffffff
+			&-btns 
+				margin-top: 20px
+				display: flex
+				justify-content: space-between
+			.btn
+				padding: 7px 25px
+				outline: none
+				border: 2px solid rgba(#fff, .6)
+				background: transparent
+				border-radius: 6px
+				color: #ffffff
+				font-size: 20px
+				font-weight: 500
+				transition: .3s ease-in
+				&:hover
+					background-color: #fff
+					color: #000000
+				&.is-active
+					background-color: #fff
+					color: #000000
 	&__phone
 		position: relative
 		font-weight: 700
@@ -117,7 +190,7 @@ body
 		width: 30px
 		height: 20px
 		display: none
-		@media (max-width: $small)
+		@media (max-width: $middle)
 			display: block
 		
 		&::before
@@ -151,15 +224,16 @@ body
 		justify-content: space-between
 		align-items: center
 		border-top: 1px solid rgba(#000, .1)
-		@media (max-width: $small)
+		@media (max-width: $middle)
 			position: absolute
 			top: -100vh
 			left: -15px
 			width: calc(100% + 30px)
-			height: 90vh
+			height: 100vh
 			z-index: 20
 			background-color: #fff
 			padding-top: 130px
+			padding-bottom: 50px
 			flex-direction: column
 			transition: .5s ease
 			&.is-active
@@ -170,7 +244,7 @@ body
 			display: flex
 			justify-content: space-between
 			font-size: 16px
-			@media (max-width: $small)
+			@media (max-width: $middle)
 				width: 100%
 				height: 60%
 				flex-direction: column
@@ -185,6 +259,7 @@ body
 					text-decoration: none
 					font-family: $font-main
 					font-size: 16px
+					font-weight: 700
 					color: $color-text-dark
 					transition: .3s ease-in
 					&:hover
@@ -237,7 +312,7 @@ body
 	height: 100vh
 	background-image: url('../img/bg-star.png')
 	background-size: contain
-	background-repeat: no-repeat
+	// background-repeat: no-repeat
 	background-position: center
 	z-index: -1
 

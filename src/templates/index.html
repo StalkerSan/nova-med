@@ -12,295 +12,366 @@ trustItems: [
   }
 ]
 ---
-{% extends "layouts/_layout.html" %}
-{% from 'partials/_mixins.html' import icon %}
-{% from 'partials/_mixins.html' import wipVideo %}
 
-{% block content %}
-	
-	<section class="hero">
-    <div class="swiper-container hero__slider">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="hero__item" style="background-image: url('img/main-page/hero-1.png')">
-            <div class="container">
-              <div class="hero__item--content">
-                <h1 class="hero__title">НЕ ТЕРПИТЕ БОЛЬ ПРОЙДИТЕ ДИАГНОСТИКУ В НАШЕМ ЦЕНТРЕ</h1>
-                <ul>
-                  <li>КАЧЕСТВЕННЫЙ И ПРОФЕССИОНАЛЬНЫЙ СЕРВИС</li>
-                  <li>МЫ В 10 ГОРОДАХ КАЗАХСТАНА</li>
-                  <li>1 МИЛЛИОНА ДОВОЛЬНЫХ КЛИЕНТОВ</li>
-                </ul>
-                <div class="hero__btns">
-                  <a href="#" class="btn__primary">Оставить заявку</a>
-                  <a href="#" class="btn__transparent">Выбрать услугу</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="hero__item" style="background-image: url('img/main-page/hero-1.png')">
-            <div class="container">
-              <div class="hero__item--content">
-                <h1 class="hero__title">НЕ ТЕРПИТЕ БОЛЬ ПРОЙДИТЕ ДИАГНОСТИКУ В НАШЕМ ЦЕНТРЕ</h1>
-                <ul>
-                  <li>КАЧЕСТВЕННЫЙ И ПРОФЕССИОНАЛЬНЫЙ СЕРВИС</li>
-                  <li>МЫ В 10 ГОРОДАХ КАЗАХСТАНА</li>
-                  <li>1 МИЛЛИОНА ДОВОЛЬНЫХ КЛИЕНТОВ</li>
-                </ul>
-                <div class="hero__btns">
-                  <a href="#" class="btn__primary">Оставить заявку</a>
-                  <a href="#" class="btn__transparent">Выбрать услугу</a>
-                </div>
+{% extends "layouts/_layout.html" %} {% from 'partials/_mixins.html' import icon
+%} {% from 'partials/_mixins.html' import wipVideo %} {% block content %}
+
+<section class="hero">
+  <div class="swiper-container hero__slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div
+          class="hero__item"
+          style="background-image: url('img/main-page/hero-1.png')"
+        >
+          <div class="container">
+            <div class="hero__item--content">
+              <h1 class="hero__title">
+                НЕ ТЕРПИТЕ БОЛЬ ПРОЙДИТЕ ДИАГНОСТИКУ В НАШЕМ ЦЕНТРЕ
+              </h1>
+              <ul>
+                <li>КАЧЕСТВЕННЫЙ И ПРОФЕССИОНАЛЬНЫЙ СЕРВИС</li>
+                <li>МЫ В 10 ГОРОДАХ КАЗАХСТАНА</li>
+                <li>1 МИЛЛИОНА ДОВОЛЬНЫХ КЛИЕНТОВ</li>
+              </ul>
+              <div class="hero__btns">
+                <a href="#" class="btn__primary">Оставить заявку</a>
+                <a href="#" class="btn__transparent">Выбрать услугу</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-slide">
+        <div
+          class="hero__item"
+          style="background-image: url('img/main-page/hero-1.png')"
+        >
+          <div class="container">
+            <div class="hero__item--content">
+              <h1 class="hero__title">
+                НЕ ТЕРПИТЕ БОЛЬ ПРОЙДИТЕ ДИАГНОСТИКУ В НАШЕМ ЦЕНТРЕ
+              </h1>
+              <ul>
+                <li>КАЧЕСТВЕННЫЙ И ПРОФЕССИОНАЛЬНЫЙ СЕРВИС</li>
+                <li>МЫ В 10 ГОРОДАХ КАЗАХСТАНА</li>
+                <li>1 МИЛЛИОНА ДОВОЛЬНЫХ КЛИЕНТОВ</li>
+              </ul>
+              <div class="hero__btns">
+                <a href="#" class="btn__primary">Оставить заявку</a>
+                <a href="#" class="btn__transparent">Выбрать услугу</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
 
-  <section class="trust">
-    <div class="container">
-      <div class="trust__inner">
-        <div class="trust__left">
-          <img src="img/main-page/trust-count.png" alt="760+" class="trust__count">
-          <h2 class="section__title">Пацциентов доверяють нам</h2>
-          <div class="trust__items">
-            {% for it in trustItems%}
-            <div class="trust__item">
-              <h4>{{it.title}}</h4>
-              <p>{{it.content}}</p>
+<section class="trust">
+  <div class="container">
+    <div class="trust__inner">
+      <div class="trust__left">
+        <img
+          src="img/main-page/trust-count.png"
+          alt="760+"
+          class="trust__count"
+        />
+        <h2 class="section__title">Пацциентов доверяють нам</h2>
+        <div class="trust__items">
+          {% for it in trustItems%}
+          <div class="trust__item">
+            <h4>{{ it.title }}</h4>
+            <p>{{ it.content }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="trust__right">
+        <div
+          class="trust__video"
+          style="background-image: url('img/main-page/trust-videoo-holder.png')"
+        >
+          <a
+            class="wip__trigger"
+            href="#"
+            data-video-url="https://www.youtube.com/embed/MxHQCvnOqEk"
+            >Посмотреть видео о центре</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="container">
+    <div class="services__inner">
+      <h2 class="section__title">Наши услуги</h2>
+      <div class="services__items">
+        {% for i in range(0,8) %}
+        <div
+          class="services__item"
+          style="background-image: url('img/main-page/services-1.png')"
+        >
+          <div class="services__item--icon">
+            {{ icon("services-icon-1") }}
+          </div>
+          <h4>5 видов массажа</h4>
+          <a href="#" class="btn__white">Подробнее</a>
+        </div>
+        {% endfor %}
+      </div>
+      <a href="#" class="btn__primary">Посмотреть все услуги</a>
+    </div>
+  </div>
+</section>
+
+<section class="feeds">
+  <div class="container">
+    <div class="feeds__inner">
+      <div class="feeds__head">
+        <h2 class="section__title">Отзывы наших клиентов</h2>
+        <div class="feeds__slider--nav">
+          <div class="feeds__slider--prev">
+            {{ icon("arrow-left") }}
+          </div>
+          <div class="feeds__slider--next">
+            {{ icon("arrow-right") }}
+          </div>
+        </div>
+      </div>
+      <div class="feeds__slider">
+        <div class="swiper-container feeds__slider--init">
+          <div class="swiper-wrapper">
+            {% for i in range(0,6) %}
+            <div class="swiper-slide">
+              <div class="feeds__item">
+                <img src="img/main-page/testimonials-1.png" alt="" />
+                <div class="feeds__item--content">
+                  <h4>Карлыгаш</h4>
+                  <span>20 лет</span>
+                  <p>
+                    Часто бывает так, что смысл текста не имеет большого
+                    значения, а важен только его объем или структура. Генератор
+                    текста онлайн позволит задать необходимое количество слов,
+                    из которых будут сформировано указанное Вами число абзацев.
+                  </p>
+                </div>
+              </div>
             </div>
             {% endfor %}
           </div>
         </div>
-        <div class="trust__right">
-          <div class="trust__video" style="background-image: url('img/main-page/trust-videoo-holder.png')">
-            <a class="wip__trigger" href="#" data-video-url="https://www.youtube.com/embed/MxHQCvnOqEk">Посмотреть видео о центре</a>
-          </div>
-        </div>
       </div>
     </div>
-  </section>
-
-  <section class="services">
-    <div class="container">
-      <div class="services__inner">
-        <h2 class="section__title">Наши услуги</h2>
-        <div class="services__items">
-          {% for i in range(0,8) %}
-          <div class="services__item" style="background-image: url('img/main-page/services-1.png')">
-            <div class="services__item--icon">
-              {{ icon('services-icon-1') }}
-            </div>
-            <h4>5 видов массажа</h4>
-            <a href="#" class="btn__white">Подробнее</a>
-          </div>
-          {% endfor %}
-        </div>
-        <a href="#" class="btn__primary">Посмотреть все услуги</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="feeds">
-    <div class="container">
-      <div class="feeds__inner">
-        <div class="feeds__head">
-          <h2 class="section__title">Отзывы наших клиентов</h2>
-          <div class="feeds__slider--nav">
-            <div class="feeds__slider--prev">
-              {{ icon('arrow-left') }}
-            </div>
-            <div class="feeds__slider--next">
-              {{ icon('arrow-right') }}
-            </div>
-          </div>
-        </div>
-        <div class="feeds__slider">
-          <div class="swiper-container feeds__slider--init">
-            <div class="swiper-wrapper">
-              {% for i in range(0,6) %}
-              <div class="swiper-slide">
-                <div class="feeds__item">
-                  <img src="img/main-page/testimonials-1.png" alt="">
-                  <div class="feeds__item--content">
-                    <h4>Карлыгаш</h4>
-                    <span>20 лет</span>
-                    <p>Часто бывает так, что смысл текста не имеет большого значения, а важен только его объем или структура. Генератор текста онлайн позволит задать необходимое количество слов, из которых будут сформировано указанное Вами число абзацев. </p>
-                  </div>
-                </div>
-              </div>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="wip">
-    <div class="container">
-      <div class="wip__inner">
-      
-        <h2 class="section__title">Посмотрите как работают наши спецалисты</h2>
-
-        <div class="wip__items">
-          {% for i in range(0,4) %}
-          <div class="wip__item" style="background-image: url('img/main-page/watch-1.png')">
-            <a class="wip__trigger" href="#" data-video-url="https://www.youtube.com/embed/MxHQCvnOqEk">
-              {{ icon('play') }}
-              <label>Как работает наркоз ?</label>
-            </a>
-          </div>
-          {% endfor %}
-        </div>
-      
-      </div>
-    </div>
-  </section>
-
-  <section class="experts">
-    <div class="container">
-      <div class="experts__inner">
-
-        <div class="experts__head">
-          <h2 class="section__title">Отзывы наших клиентов</h2>
-          <div class="experts__slider--nav">
-            <div class="experts__slider--prev">
-              {{ icon('arrow-left') }}
-            </div>
-            <div class="experts__slider--next">
-              {{ icon('arrow-right') }}
-            </div>
-          </div>
-        </div>
-
-        <div class="experts__slider">
-          <div class="swiper-container experts__slider--init">
-            <div class="swiper-wrapper">
-              {% for i in range(0,6) %}
-              <div class="swiper-slide">
-                <figure class="experts__item">
-                  <img src="img/main-page/workers-1.png" alt="">
-                  <figcaption class="experts__item--desc">
-                    <h4>Serenity Steward</h4>
-                    <span>Врач хирург</span>
-                  </figcaption>
-                  <a href="#" class="btn__white">Подробнее</a>
-                </figure>
-              </div>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="faq">
-    <div class="container">
-      <div class="faq__inner">
-      
-        <h2 class="section__title">ВОПРОСЫ - ОТВЕТЫ</h2>
-
-        <div class="faq__items">
-          <div class="faq__col">
-            <div class="faq__item">
-              <div class="faq__item--top">
-                <h3>Компьютерная томография это?</h3>
-                <div class="faq__item--icon">
-                  {{ icon('plus-open')}}
-                </div>
-              </div>
-              <div class="faq__item--content">
-                <p>Врач-рентгенолог, высшей категории. Проведение МРТ-исследований: головного мозга, костно-суставной системы, органов грудной клетки, органов брюшной полости и забрюшинного пространства, органов малого таза . Перед исследованиями следует продолжить прием лекарств (если они Вам назначены), рекомендуется умеренный прием пищи. - Необходимо сообщить о наличии металлических суставных протезов, искусственных сердечных клапанов, электронных медицинских устройств, электронных имплантатов среднего уха или имплантатов в зубном ряду.</p>
-                <div class="faq__item--links">
-                  <h4>Полезные ссылки</h4>
-                  <ul>
-                    <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
-                    <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
-                    <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
-                    <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="faq__item">
-              <div class="faq__item--top">
-                <h3>Компьютерная томография это?</h3>
-                <div class="faq__item--icon">
-                  {{ icon('plus-open')}}
-                </div>
-              </div>
-              <div class="faq__item--content">
-                <p>Врач-рентгенолог, высшей категории. Проведение МРТ-исследований: головного мозга, костно-суставной системы, органов грудной клетки, органов брюшной полости и забрюшинного пространства, органов малого таза . Перед исследованиями следует продолжить прием лекарств (если они Вам назначены), рекомендуется умеренный прием пищи. - Необходимо сообщить о наличии металлических суставных протезов, искусственных сердечных клапанов, электронных медицинских устройств, электронных имплантатов среднего уха или имплантатов в зубном ряду.</p>
-                <div class="faq__item--links">
-                  <h4>Полезные ссылки</h4>
-                  <ul>
-                    <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
-                    <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
-                    <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
-                    <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="faq__col">
-            <div class="faq__item">
-              <div class="faq__item--top">
-                <h3>Компьютерная томография это?</h3>
-                <div class="faq__item--icon">
-                  {{ icon('plus-open')}}
-                </div>
-              </div>
-              <div class="faq__item--content">
-                <p>Врач-рентгенолог, высшей категории. Проведение МРТ-исследований: головного мозга, костно-суставной системы, органов грудной клетки, органов брюшной полости и забрюшинного пространства, органов малого таза . Перед исследованиями следует продолжить прием лекарств (если они Вам назначены), рекомендуется умеренный прием пищи. - Необходимо сообщить о наличии металлических суставных протезов, искусственных сердечных клапанов, электронных медицинских устройств, электронных имплантатов среднего уха или имплантатов в зубном ряду.</p>
-                <div class="faq__item--links">
-                  <h4>Полезные ссылки</h4>
-                  <ul>
-                    <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
-                    <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
-                    <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
-                    <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="faq__item">
-              <div class="faq__item--top">
-                <h3>Компьютерная томография это?</h3>
-                <div class="faq__item--icon">
-                  {{ icon('plus-open')}}
-                </div>
-              </div>
-              <div class="faq__item--content">
-                <p>Врач-рентгенолог, высшей категории. Проведение МРТ-исследований: головного мозга, костно-суставной системы, органов грудной клетки, органов брюшной полости и забрюшинного пространства, органов малого таза . Перед исследованиями следует продолжить прием лекарств (если они Вам назначены), рекомендуется умеренный прием пищи. - Необходимо сообщить о наличии металлических суставных протезов, искусственных сердечных клапанов, электронных медицинских устройств, электронных имплантатов среднего уха или имплантатов в зубном ряду.</p>
-                <div class="faq__item--links">
-                  <h4>Полезные ссылки</h4>
-                  <ul>
-                    <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
-                    <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
-                    <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
-                    <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="extra">
-    
   </div>
+</section>
+
+<section class="wip">
+  <div class="container">
+    <div class="wip__inner">
+      <h2 class="section__title">Посмотрите как работают наши спецалисты</h2>
+
+      <div class="wip__items">
+        {% for i in range(0,4) %}
+        <div
+          class="wip__item"
+          style="background-image: url('img/main-page/cat.jpg')"
+        >
+          <a
+            class="wip__trigger"
+            href="#"
+            data-video-url="https://www.youtube.com/embed/MxHQCvnOqEk"
+          >
+            {{ icon("play") }}
+            <label>Как работает наркоз ?</label>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+
+      <a class="wip__more" href="#"
+        >{{ icon("refresh") }} <span>Загрузить еще</span></a
+      >
+    </div>
+  </div>
+</section>
+
+<section class="experts">
+  <div class="container">
+    <div class="experts__inner">
+      <div class="experts__head">
+        <h2 class="section__title">Отзывы наших клиентов</h2>
+        <div class="experts__slider--nav">
+          <div class="experts__slider--prev">
+            {{ icon("arrow-left") }}
+          </div>
+          <div class="experts__slider--next">
+            {{ icon("arrow-right") }}
+          </div>
+        </div>
+      </div>
+
+      <div class="experts__slider">
+        <div class="swiper-container experts__slider--init">
+          <div class="swiper-wrapper">
+            {% for i in range(0,6) %}
+            <div class="swiper-slide">
+              <figure class="experts__item">
+                <img src="img/main-page/workers-1.png" alt="" />
+                <figcaption class="experts__item--desc">
+                  <h4>Serenity Steward</h4>
+                  <span>Врач хирург</span>
+                </figcaption>
+                <a href="#" class="btn__white">Подробнее</a>
+              </figure>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="faq__inner">
+      <h2 class="section__title">ВОПРОСЫ - ОТВЕТЫ</h2>
+
+      <div class="faq__items">
+        <div class="faq__col">
+          <div class="faq__item">
+            <div class="faq__item--top">
+              <h3>Компьютерная томография это?</h3>
+              <div class="faq__item--icon">
+                {{ icon("plus-open") }}
+              </div>
+            </div>
+            <div class="faq__item--content">
+              <p>
+                Врач-рентгенолог, высшей категории. Проведение МРТ-исследований:
+                головного мозга, костно-суставной системы, органов грудной
+                клетки, органов брюшной полости и забрюшинного пространства,
+                органов малого таза . Перед исследованиями следует продолжить
+                прием лекарств (если они Вам назначены), рекомендуется умеренный
+                прием пищи. - Необходимо сообщить о наличии металлических
+                суставных протезов, искусственных сердечных клапанов,
+                электронных медицинских устройств, электронных имплантатов
+                среднего уха или имплантатов в зубном ряду.
+              </p>
+              <div class="faq__item--links">
+                <h4>Полезные ссылки</h4>
+                <ul>
+                  <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
+                  <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
+                  <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
+                  <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <div class="faq__item--top">
+              <h3>Компьютерная томография это?</h3>
+              <div class="faq__item--icon">
+                {{ icon("plus-open") }}
+              </div>
+            </div>
+            <div class="faq__item--content">
+              <p>
+                Врач-рентгенолог, высшей категории. Проведение МРТ-исследований:
+                головного мозга, костно-суставной системы, органов грудной
+                клетки, органов брюшной полости и забрюшинного пространства,
+                органов малого таза . Перед исследованиями следует продолжить
+                прием лекарств (если они Вам назначены), рекомендуется умеренный
+                прием пищи. - Необходимо сообщить о наличии металлических
+                суставных протезов, искусственных сердечных клапанов,
+                электронных медицинских устройств, электронных имплантатов
+                среднего уха или имплантатов в зубном ряду.
+              </p>
+              <!-- <div class="faq__item--links">
+                <h4>Полезные ссылки</h4>
+                <ul>
+                  <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
+                  <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
+                  <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
+                  <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
+                </ul>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="faq__col">
+          <div class="faq__item">
+            <div class="faq__item--top">
+              <h3>Компьютерная томография это?</h3>
+              <div class="faq__item--icon">
+                {{ icon("plus-open") }}
+              </div>
+            </div>
+            <div class="faq__item--content">
+              <p>
+                Врач-рентгенолог, высшей категории. Проведение МРТ-исследований:
+                головного мозга, костно-суставной системы, органов грудной
+                клетки, органов брюшной полости и забрюшинного пространства,
+                органов малого таза . Перед исследованиями следует продолжить
+                прием лекарств (если они Вам назначены), рекомендуется умеренный
+                прием пищи. - Необходимо сообщить о наличии металлических
+                суставных протезов, искусственных сердечных клапанов,
+                электронных медицинских устройств, электронных имплантатов
+                среднего уха или имплантатов в зубном ряду.
+              </p>
+              <div class="faq__item--links">
+                <h4>Полезные ссылки</h4>
+                <ul>
+                  <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
+                  <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
+                  <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
+                  <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <div class="faq__item--top">
+              <h3>Компьютерная томография это?</h3>
+              <div class="faq__item--icon">
+                {{ icon("plus-open") }}
+              </div>
+            </div>
+            <div class="faq__item--content">
+              <p>
+                Врач-рентгенолог, высшей категории. Проведение МРТ-исследований:
+                головного мозга, костно-суставной системы, органов грудной
+                клетки, органов брюшной полости и забрюшинного пространства,
+                органов малого таза . Перед исследованиями следует продолжить
+                прием лекарств (если они Вам назначены), рекомендуется умеренный
+                прием пищи. - Необходимо сообщить о наличии металлических
+                суставных протезов, искусственных сердечных клапанов,
+                электронных медицинских устройств, электронных имплантатов
+                среднего уха или имплантатов в зубном ряду.
+              </p>
+              <div class="faq__item--links">
+                <h4>Полезные ссылки</h4>
+                <ul>
+                  <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
+                  <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
+                  <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
+                  <li><a href="#">«Дорожная карта бизнеса-2020»</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="extra"></div>
 
 {% endblock %}
