@@ -408,3 +408,59 @@ body
 			width: 100%
 		iframe
 			width: 100%
+
+#citiesModal
+	position: relative
+	min-width: 300px
+	width: 25%
+	padding: 30px 35px
+	background-color: #fff
+	border-radius: 7px
+	box-shadow: 0px 4px 50px rgba(147, 157, 157, 0.25)
+	cursor: default
+	b 
+		position: relative
+		display: block
+		font-size: 20px
+		padding-bottom: 5px
+		padding-left: 35px
+		border-bottom: 1px solid rgba(#000, .1)
+		margin-bottom: 10px
+		&::before
+			content: ''
+			position: absolute
+			top: 30%
+			left: 0
+			transform: translateY(-50%)
+			width: 14px
+			height: 20px
+			background-image: url('../img/geo.svg')
+			background-size: contain
+			background-repeat: no-repeat
+			background-position: center
+			z-index: 1
+	ul 
+		margin: 15px 0 0 0
+		padding: 0
+		color: $color-text-dark
+		li 
+			position: relative
+			margin: 16px 0
+			padding-left: 40px
+			&::before
+        content: ''
+        width: 20px
+        height: 2px
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        background-color: $color-accent
+		li a 
+			text-decoration: none
+			color: $color-text-dark
+			font-weight: 700
+			cursor: pointer
+			transition: .3s ease-in
+			&:hover
+				color: $color-accent

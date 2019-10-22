@@ -1,22 +1,29 @@
 {% macro icon(i) %}
-<svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
-{% endmacro %}
-
-{% macro wipVideo() %}
+<svg class="icon icon-{{ i }}">
+  <use xlink:href="img/sprite.svg#icon-{{ i }}"></use>
+</svg>
+{% endmacro %} {% macro wipVideo() %}
 <div id="wip__modal--video" class="wip__modal--video">
   <iframe src="" frameborder="0"></iframe>
 </div>
-{% endmacro %}
-
-{% macro feedModal() %}
+{% endmacro %} {% macro feedModal() %}
 <div id="feed__modal" class="feed__modal" style="display: none;">
-          <div class="services-form__form">
-            <form>
-              <h3>Оставьте заявку</h3>
-              <input type="text" placeholder="Введите свое  имя">
-              <input type="tel" placeholder="Введите свои номер телефона">
-              <input class="btn__primary" type="submit" value="Оставить заявку">
-            </form>
-          </div>
+  <div class="services-form__form">
+    <form>
+      <h3>Оставьте заявку</h3>
+      <input type="text" placeholder="Введите свое  имя" />
+      <input type="tel" placeholder="Введите свои номер телефона" />
+      <input class="btn__primary" type="submit" value="Оставить заявку" />
+    </form>
+  </div>
+</div>
+{% endmacro %} {% macro citiesModal() %}
+<div id="citiesModal" style="display: none;">
+  <b>Алматы</b>
+  <ul>
+    <li><a href="#">Нур-Султан</a></li>
+    <li><a href="#">Атырау</a></li>
+    <li><a href="#">Шымкент</a></li>
+  </ul>
 </div>
 {% endmacro %}
