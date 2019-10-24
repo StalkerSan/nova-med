@@ -3,10 +3,12 @@ title: Index page
 
 trustItems: [
   {
+    id: 1,
     title: '320 000 +',
     content: 'Клиентов мы обслужили'
   },
   {
+    id: 2,
     title: '150 000 +',
     content: 'Всего нами проведено МРТ иследований'
   }
@@ -83,7 +85,7 @@ trustItems: [
         <div class="trust__items">
           {% for it in trustItems%}
           <div class="trust__item">
-            <h4>{{ it.title }}</h4>
+            <h4><span id="countup{{ it.id }}"></span>+</h4>
             <p>{{ it.content }}</p>
           </div>
           {% endfor %}
