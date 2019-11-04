@@ -331,8 +331,9 @@
         opacity: 0
       &:after
         opacity: 1
-      .services__item--icon svg 
-        fill: #fff
+      .services__item--icon img 
+        // fill: #fff
+        filter: brightness(3)
       h4 
         color: #fff
     &--icon 
@@ -342,10 +343,11 @@
       display: flex
       justify-content: center
       z-index: 3
-      svg 
+      img 
         width: 100%
         height: 100%
-        fill: $color-accent
+        // fill: $color-accent
+        filter: brightness(1)
         transition: .3s ease-in
     h4 
       position: relative
